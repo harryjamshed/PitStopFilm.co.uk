@@ -1,0 +1,2025 @@
+/*
+	Theme Name: PIT STOP FILM
+	Theme URI: http://pitstopfilm.co.uk/pitstop/
+	Description: Pit stop film theme
+	Version: 1.4.3
+	Author: Haroon Jamshed
+	Author URI: http://pitstopfilm.co.uk/
+	Tags: Blank, HTML5, CSS3
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Palanquin:300);
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+@import "compass/css3";
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+
+html{
+	margin: 0px;
+}
+
+body{
+	margin: 0 auto;
+	padding: 0px;
+	display: block;
+	width: 100%;
+	background-image:url(../pitstopweb/images/homeimage.png);
+	background-color: #0d0d0d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper{
+	height:100%;
+    /*width: 57%;*/
+    width: 823px;
+    padding-top: 3.5em;
+    display: block;
+    margin: 0 auto;
+    color: rgba(255,  255,  255, 0.7);
+    text-decoration: none;
+	font-family: 'Palanquin', sans-serif;
+	font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#cp{
+	display: none;
+}
+
+#cpBtn p {
+	display: none;
+}
+
+
+/** UP AND DOWN ARROWS **/
+
+.arrows {
+    display: none;
+    float: right;
+    width: 85px;
+    bottom: 3em;
+    right: 5em;
+    position: fixed;
+    padding-top: 1px;
+    -webkit-transition: 1s;
+    background-color: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.up{	
+	display: block;	
+	width: 48px;
+	margin-left: 1.5em;
+	background-size: contain;
+	 -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+    opacity: 0.8;
+    -webkit-transition: 0.2s;
+}
+
+.up:hover {
+	opacity: 1;
+}
+
+.down {
+	display: block;
+	width: 48px;
+	margin-left: 1.5em;
+	background-size: contain;
+	opacity: 0.8;
+	margin-top: 10px;
+	-webkit-transition: 0.2s;
+	 -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+
+}
+
+.down:hover {
+	opacity: 1;
+}
+
+
+header {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    background: none;
+	font-family: 'Palanquin', sans-serif;
+	font-weight: lighter; 
+    /**border-bottom: 1px solid rgba(255, 255, 255, 0.3);**/
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    margin-bottom: 1em;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+#nav{
+    list-style:none;
+    display: block;
+    padding-top: 5px;
+    margin:0 auto;
+    height: 20px;
+    text-align:center;
+    -webkit-transition: 0.3s;
+}
+
+ul{
+	margin: 0px;
+}
+
+#nav li{
+    display:inline;
+    text-decoration: none;
+}
+#nav a{
+    display: inline-block;
+    margin-right: 1em;
+    text-decoration: none;
+	font-family: 'Palanquin', sans-serif;
+    font-weight: lighter;
+    color: #e0d210;
+    letter-spacing: 3px;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    -webkit-transition: 0.4s;
+    text-align: center;
+    font-size: 17px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    /* padding: 3px 0px 3px 3px; */
+    /* margin: 5px 1px 3px 0px; */
+    /* border: 1px solid #DDDDDD; */
+}
+
+#nav a:hover {
+  color: white;
+  box-shadow: 0 2px rgba(255, 255, 255, 0.89);
+  border-bottom: 0 2px solid rgba(255,  255,  255, 0.9);
+}
+
+#nav a:active{
+    color: #e0d210;
+}
+
+#nav a:active {
+	color: white;	
+}
+
+
+main{
+	background-color: none;
+    width: 100%;
+    height: 640px;
+    /**border-bottom:1px solid black;**/
+    display: block;
+    margin-top: 0.5em;
+    text-decoration: none;
+    list-style-type: none;
+    /* margin: 0 auto; */
+}
+
+@include keyframes(bounce) {
+	0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+	40% {
+    @include transform(translateY(-30px));
+  }
+	60% {
+    @include transform(translateY(-15px));
+  }
+}
+
+.industrylogocontainer {
+    width: 70%;
+    display: block;
+    height: 200px;
+    bottom: 1em;
+    left: 18em;
+    z-index: 0;
+    position: absolute;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: none;
+}
+
+.bradfordfilm {
+    display: block;
+    float: left;
+    width: 170px;
+    margin-top: 1em;
+    background-size: contain;
+    opacity: 0.8;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+.bradfordfilm:hover {
+	opacity: 1;
+}
+
+.londonfilm {
+    display: none;
+    /* float: left;
+    margin: 0 auto;
+    width: 170px;
+    background-size: contain;
+    opacity: 0.8;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out; */
+}
+
+.londonfilm:hover {
+	opacity: 1;
+}
+
+
+.finitebig {
+    display: block;
+    float: right;
+    width: 170px;
+    margin-top: 3.4em;
+    background-size: contain;
+    opacity: 0.8;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+.finitebig:hover {
+	opacity: 1;
+}
+
+#fadeonscroll{
+	-webkit-transition: 0.3s;	
+}
+
+.arrow {
+	position: absolute;
+    bottom: 3em;
+    left: 50%;
+    margin-left: -25px;
+    width: 70px;
+    height: 32px;
+    background-image: url(http://www.pitstopfilm.co.uk/wp-content/themes/pitstopweb/images/arrow1.png);
+    background-size: contain;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+}
+
+ 
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+ 40% {-webkit-transform: translateY(-30px);}
+ 60% {-webkit-transform: translateY(-15px);}
+}
+ 
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-30px);}
+ 60% {-moz-transform: translateY(-15px);}
+}
+ 
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 40% {-o-transform: translateY(-30px);}
+ 60% {-o-transform: translateY(-15px);}
+}
+@keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 40% {transform: translateY(-30px);}
+ 60% {transform: translateY(-15px);}
+}
+ 
+
+.bounce {
+  @include animation(bounce 2s infinite);
+}
+
+
+.logocontainer {
+    display: block;
+    width: 690px;
+    height: 200px;
+    background: none;
+    margin: 0 auto;
+    position: relative;
+    top: 21.5em;
+    left: 6em;
+}
+
+/* PIT STOP LOGO */
+#pitstop img {
+    display: block;
+    width: 815px;
+    /* margin: 0 auto; */
+    float: right;
+    /* padding-right: 0.5em; */
+    padding-top: 0.3em;
+}
+/* PIT STOP LOGO END */
+
+/* PIT STOP LOGO FLICKER */
+
+.flicker{
+  animation: blinker 4s linear infinite;
+   -webkit-animation: blinker 4s linear infinite;
+  -moz-animation:     blinker 4s linear infinite; 
+  -o-animation:       blinker 4s linear infinite; 
+  animation:          blinker 4s linear infinite; 
+}
+
+
+@-webkit-keyframes blinker {
+	from {
+		opacity: 1;
+	}
+	4% {
+		opacity: 0.65;
+	}
+	6% {
+		opacity: 0.8;
+	}
+	8% {
+		opacity: 0.7;
+	}
+	10% {
+		opacity: 0.5;
+	}
+	11% {
+		opacity: 1;
+	}
+	12% {
+		opacity: 0;
+	}
+	14% {
+		opacity: 0.8;
+	}
+	16% {
+		opacity: 0.70;
+	}
+	17% {
+		opacity: 0.9;
+	}
+	19% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+	}
+	24% {
+		opacity: 0.7;
+	}
+	26% {
+		opacity: 0.69;
+	}
+	28% {
+		opacity: 0.9;
+	}
+	38% {
+		opacity: 0.8;
+		/*left: 1px;
+		position: relative;*/
+	}
+	40% {
+		opacity: 0.9;
+	}
+	42% {
+		opacity: 0.7;
+		/*right: 1px;
+		position: relative;*/
+	}
+	44% {
+		opacity: 0.9;
+	}
+	46% {
+		opacity: 1;
+	}
+	56% {
+		opacity: 0.8;
+	}
+	58% {
+		opacity: 0.75;
+	}
+	60% {
+		opacity: 0.9;
+	}
+	68% {
+		opacity: 0.75;
+	}
+	70% {
+		opacity: ; /*peak*/
+	}
+	72% {
+		opacity: 0.8;
+	}
+	93% {
+		opacity: 0.75;
+	}
+	95% {
+		opacity: 1; /*peak*/
+	}
+	97% {
+		opacity: 0.8;
+	}
+	98% {
+		opacity: 0.9;
+	}
+	99% {
+		opacity: 1;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* PIT STOP LOGO move */
+
+@keyframes move {
+  from { top: 0; left: 0; }
+  to   { left: 2px; }
+}
+
+.move{
+  animation: blinker 4s linear infinite;
+   -webkit-animation: blinker 4s linear infinite;
+  -moz-animation:     blinker 4s linear infinite; 
+  -o-animation:       blinker 4s linear infinite; 
+  animation:          blinker 4s linear infinite; 
+}
+
+
+
+
+#ashortfilm{
+ 	display: block;
+    width: 316px;
+    color: white;
+    float: right;
+    margin-top: -5px;
+    padding-right: 0px;
+    letter-spacing: 2px;
+    /*text-transform: uppercase;*/
+    font-size: 10px;
+}
+ 
+ /** SOCIAL NETWORK ICON LINKS (HEADER) **/
+
+.socialnetwork{
+	margin-right: 2em;
+}
+.socialnetwork li{
+    width: 20px;
+    height: 20px;
+    float: right;
+    background-color: white;
+    margin-top: -0.8em;
+    margin-right: 0.8em;
+    display: inline;
+    border-radius: 200px;
+    text-decoration: none;
+}
+.facebook a:link {
+    background-image: url(../pitstopweb/images/socialicons/facebook.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    -webkit-transition: 1.5s;
+    background-color: black;
+    background-size: contain;
+    border-radius: 100%;
+
+}
+
+.facebook a:link:hover {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    background-color: black;
+
+}
+
+.twitter a:link {
+    background-image: url(../pitstopweb/images/socialicons/twitter.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    -webkit-transition: 1.5s;
+    background-color: black;
+    background-size: contain;
+    border-radius: 100%;
+
+}
+
+.twitter a:link:hover {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    background-color: black;
+
+}
+
+
+.vimeo a:link {
+    background-image: url(../pitstopweb/images/socialicons/vimeo2.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    -webkit-transition: 1.5s;
+    background-color: black;
+    background-size: contain;
+    border-radius: 100%;
+
+}
+
+.vimeo a:link:hover {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    background-color: black;
+
+}
+
+
+.youtube a:link {
+    background-image: url(../pitstopweb/images/socialicons/youtube.png);
+    width: 20px;
+    height: 20px;
+    display: block;
+    -webkit-transition: 1.5s;
+    background-color: black;
+    background-size: contain;
+    border-radius: 100%;
+}
+
+.youtube a:link:hover {
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+    background-color: black;
+
+}
+
+ul.partnerslogos li {
+    /* width: 14%; */
+    float: left;
+    margin-top: -1.2em;
+    margin-right: 1.5em;
+    display: inline;
+    border-radius: 200px;
+    text-decoration: none;
+    background-color: none;
+    opacity: 0.6;
+    -webkit-transition:0.3s;
+}
+
+
+
+ul.partnerslogos li:hover {
+	opacity: 1;
+}
+
+
+li.bradfordcityoffilm a{
+	display: block;
+    width: 75px;
+    height: 59px;
+    margin-top: 1.5em;
+    background-size: cover;
+    background-image:url(http://www.pitstopfilm.co.uk/wp-content/uploads/2015/08/cityoffilm-250x200.png);
+}
+
+li.finite a{
+    display: block;
+    width: 107px;
+    height: 39px;
+    margin-top: 2.7em;
+    background-size: cover;    
+    background-image:url(http://www.pitstopfilm.co.uk/wp-content/uploads/2015/08/finiteproduction2logo.png);
+}
+
+li.provision a{
+    display: block;
+    width: 165px;
+    height: 34px;
+    margin-top: 3em;
+    background-size: cover;    
+    background-image:url(http://www.pitstopfilm.co.uk/wp-content/uploads/2015/08/Provisionlogo.png);
+}
+
+li.processmovingimg a {
+    display: block;
+    width: 47px;
+    height: 46px;
+    margin-top: 2em;
+    background-size: cover;
+    background-image: url(http://www.pitstopfilm.co.uk/wp-content/uploads/2015/08/processmovingimage.png);
+}
+
+
+#space{
+	display: block;
+	height: 200px;
+	width: 100%;
+}
+
+.panel {
+	padding-top: 10px;
+	/*padding-left:20px;*/
+	letter-spacing: 1px;
+}
+
+.panel img{
+	width: 45%;
+	margin: 64px 15px 5px 0px;
+	display: block;
+	float: left;
+}
+
+.alignright{
+	width: 45%;
+	margin: 51px 15px 5px 0px;
+	display: block;
+	float: right;
+}
+
+
+.panel h1 {
+    padding-bottom: 0.2em;
+    /* padding-left: 0.7em; */
+    width: 55.5%;
+    margin-left: 0.7em;
+    letter-spacing: 4px;
+    color: #C5D1D1;
+    opacity: 0.7;
+    border-bottom: 1px solid #cecece;
+    /* margin: 0 auto; */
+}
+
+.panel p{
+	display: block;
+	margin-left: -1em;
+	margin-top: -1em;
+	text-align: left;
+}
+
+article{
+	width: 90%;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-top: -3.5em;
+	padding-bottom: 24px;	
+}
+
+p.space{
+	padding: 3px;
+}
+
+.trailer{
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 160px;
+    padding-bottom: 140px;
+}
+
+.vjs-default-skin .vjs-big-play-button{
+	display: none;
+}
+
+.synopsis{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px; 
+    height: 100%;
+    display: block;
+    margin-top: 160px;
+}
+
+.synopsis a{
+	padding-bottom:0px;
+    border-bottom: 1px solid #e0d210;
+    color: #e0d210;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.synopsis h1{
+    opacity: 0.7;
+}
+
+#synopsis{
+    display: block;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+    padding-left: 2.4em;
+    padding-top:10px;
+}
+
+#synopsis p{
+	font-size: 16px;
+}
+
+.synopsis img{
+	width: 70%;
+	display: block;
+	margin: 2em auto;
+	float: none;
+	border: 3px solid black;
+}
+
+p.pitstopdiscription{
+	color:rgba(255, 228, 89, 0.78);
+	opacity: 0.9;
+	font-weight:900;
+}
+
+.screening{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px; 
+    height: 550px;
+    display: block;
+    margin-top: 160px;
+}
+
+
+#screeningtxt{
+	display: block;
+	margin: 0 auto;
+	float: none;
+	text-align: left;
+    color: #e0d210;
+	text-align: left;
+	padding: 0px;
+	opacity: 0.8;
+	font-size: 24px;
+}
+
+.screening img{
+	display: block;
+	width: 200px;
+	float: right;
+	margin: 1.5em;
+}
+
+.cast{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 100%;
+    display: block;
+    margin-top: 160px;
+ 
+}
+
+.cast h2{
+	color: #1abc9c;
+    text-transform: uppercase;
+}
+
+
+.crew{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 100%;
+    display: block;
+    margin-top: 160px;
+    /* margin: 0 auto; */
+}
+
+.scrollbar
+{
+    margin-left: -15px;
+    float: left;
+    padding-left: 15px;
+    height: 260px;
+    padding-top: 10px;
+    width: 100%;
+    background: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+/*
+ *  STYLE 4
+ */
+
+#style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow:white;
+	background-color: #4f4f4f;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: white;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: white;
+}
+
+#crewlist{
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 12px;
+    width: 750px;
+    height: 250px;
+    padding-left: 15px;
+    /* padding-right: 2em; */
+}
+
+#crewlist img {
+    display: block;
+    margin: 2em 0;
+    float: none;
+    width: 19%;
+    opacity: 0.8;
+}
+
+.smallest{
+    display: block;
+    margin: 2em 0px 2em 2px;
+    float: none;
+    width: 45%;
+}
+
+
+
+#crew{
+	width: 90%;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-top: -2.5em;
+	padding-bottom: 24px;	
+}
+
+#crew a{
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e0d210;
+    color: #e0d210;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* CREW ARTICLE CONTAINER */
+#crew h2{
+	color:#25a3f6; 
+    text-transform: uppercase;
+}
+
+.slider{
+	display: block;
+	width: 100%;
+}
+
+.bts{
+	background-color:rgba(0,0,0,0.5);
+    width: 800px;
+    height: 100%;
+    display: block;
+    margin-top: 160px;
+    /* margin: 0 auto; */
+}
+
+.bts h1{
+	width: 55%;
+	color: #e74c3c;
+}
+
+.ms-skin-default .ms-nav-next{
+	z-index: -1;
+}
+
+/** EASING SLIDER ARROWS **/
+.sp-fade-arrows {
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.easingslider{
+	display: block;
+	margin-left: -1em;
+}
+
+
+.press{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 400px;
+    display: block;
+    margin-top: 160px;
+    /* margin: 0 auto; */
+}
+
+.press{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 700px;
+    display: block;
+    margin-top: 160px;
+    /* margin: 0 auto; */
+}
+
+#contact a{
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e0d210;
+    color: #e0d210;
+    opacity: 0.8;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.contact h1{
+	color:#F2ACBC;
+	width: 66%;
+}
+
+.contact{
+	background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 100%;
+    display: block;
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+#contact{
+    display: block;
+    padding-top: 0em;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+#contact2{
+    display: block;
+    padding-top: 0em;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+#contact2 a{
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e0d210;
+    color: #e0d210;
+    opacity: 0.8;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+#contact3{
+    display: block;
+    padding-top: 0em;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 27px;
+    text-transform: uppercase;
+}
+
+#contact3 a{
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e0d210;
+    color: #e0d210;
+    opacity: 0.8;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.partners{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 150px;
+    display: block;
+    margin-top: -8em;
+    margin-bottom: 2em;
+}
+
+
+/**.featuredheading{
+    display: block;
+    float: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    margin-left: 2em;
+    font-size: 36px;
+    padding: 2px 10px 2px 10px;
+    background-color: rgba(0, 0, 0, 0.87);
+}**/
+
+footer{
+	width: 100%;
+	display: block;
+	background-color: transparent;
+}
+
+footer p{
+	text-align: center;
+	margin-top: 0.1em;
+	color: white;
+	font-size: 15px;
+	font-family: 'Palanquin', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.partners h1{
+	margin-top: -5px;
+	padding-bottom: 5px;
+}
+
+.developerlink{
+	display: block; 
+	float: right; 
+	position: relative; 
+	margin-top: -45px; 
+	right: -20em; 
+	padding: 2px;
+	border-bottom: 1px solid white;
+	font-weight: lighter; 
+	opacity: 0.7; 
+	font-size:12px;
+	-webkit-transition: 0.2s;
+}
+
+.developerlink:hover {
+	opacity: 1;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+	@media only screen and (max-width: 1440px) {
+	    
+		
+		#nav a {
+		    color: #e0d210;
+		}
+				
+		.wrapper{
+			width: 57%;
+		}
+		
+		#pitstop img {
+		    display: block;
+		    width: 650px;
+		    /* margin: 0 auto; */
+		    float: right;
+		    padding-top: 0.3em;
+		}
+		
+		.logocontainer {
+		    display: block;
+		    width: 690px;
+		    height: 200px;
+		    background: none;
+		    margin: 0 auto;
+		    position: relative;
+		    top: 15em;
+		    left: -0.5em;
+		}
+		
+		.arrow {
+		    bottom: 0em;
+		    left: 50%;
+		    margin-left: -25px;
+		}
+			
+				
+		#ashortfilm{
+		top: 31em;
+		}
+		
+		
+		.industrylogocontainer {
+		    width: 89.5%;
+		    display: block;
+		    height: 200px;
+		    bottom: 0;
+		    zoom:105%;
+		    left: 2em;
+		    z-index: 0;
+		    position: absolute;
+		    margin-left: 3em;
+		    margin-right: 1em;
+		    background-color: none;
+		}
+		
+		
+		.arrows {
+	    width: 85px;
+	    bottom: 75px;
+	    right: 30px;
+		}
+	}
+	
+	@media only screen and (max-width:1200px) {
+		
+		.wrapper{
+			width: 708px;
+		}
+		
+		.synopsis{
+			width: 750px;
+		}
+		
+		.trailer{
+			width: 750px;
+		}
+		
+		.screening{
+			width: 750px;
+		}
+		
+		.screening img{
+			display: block;
+			width: 200px;
+			float: right;
+			margin: 0.5em;
+		}
+		
+		.cast{
+			width: 750px;
+		}
+		
+		.crew{
+			width: 750px;
+		}
+		
+		#crewlist {
+	    	width: 93%;
+		}
+		
+		.bts{
+			width: 750px;
+		}
+		
+		.contact{
+			width: 750px;
+		}
+		
+		.contact h1{
+		    width: 65%;
+		    font-size: 29px;
+		    margin-bottom: 1em;
+		}
+		
+		.partners {
+			width: 750px;
+		}
+		
+		.partners h1 {
+		    margin-top: 0em;
+		    margin-bottom: 1em;		
+		}
+		footer {
+		    width: 75%;
+		    display: block;
+		    background-color: transparent;
+		}
+		
+
+	}
+	
+	@media only screen and (max-width:1010px) {
+		
+		#nav {
+	    display: block;
+	    margin-left: -40px;
+	    float: left;
+		}
+		
+		.developerlink{
+			display: none;
+		}
+				
+		.socialnetwork {
+		    margin-right: 2em;
+		    margin-top: 2em;
+		}
+		
+		.wrapper{
+			width: 715px;
+		}
+		
+		.industrylogocontainer {
+		    display: none;
+		}
+		
+		.synopsis{
+			width: 700px;
+		}
+		
+		.trailer{
+			width: 700px;
+		}
+		
+		.screening{
+			width: 700px;
+			height:550px;
+		}
+		
+		.cast{
+			width: 700px;
+		}
+		
+		.crew{
+			width: 700px;
+		}
+		
+		#crewlist {
+	    	width: 93%;
+		}
+		
+		.bts{
+			width: 700px;
+		}
+		
+		.contact{
+			width: 700px;
+		}
+		
+		.contact h1{
+		    width: 65%;
+		    font-size: 29px;
+		    margin-bottom: 1em;
+		}
+		
+		.partners {
+			width: 700px;
+		}
+		
+
+	}
+
+	@media only screen and (max-width:915px) {
+		
+		#nav {
+		}
+		
+		.developerlink {
+		    display: none;
+		}
+
+				
+		
+		.wrapper{
+			width: 615px;
+		}
+		
+		.synopsis{
+			width: 615px;
+		}
+		
+		.trailer{
+			width: 615px;
+		}
+		
+		.screening{
+			width: 615px;
+		}
+		
+		.screening img{
+			display: block;
+			width: 150px;
+			float: right;
+			margin: 0.5em;
+		}
+
+		
+		.cast{
+			width: 615px;
+		}
+		
+		.crew{
+			width: 615px;
+		}
+		
+		#crewlist {
+	    	width: 93%;
+		}
+		
+		.bts{
+			width: 615px;
+		}
+		
+		.bts h1 {
+		    width: 55%;
+		    color: #e74c3c;
+		    font-size: 30px;
+		}
+		
+		.contact{
+			width: 615px;
+		}
+		
+		.partners {
+			width: 615px;
+		}
+		
+		.arrows {
+		    width: 85px;
+		    bottom: 20px;
+		    right: 0px;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		    /**background-color: rgba(0, 0, 0, 0.5);**/
+		}
+		
+		.logocontainer {
+		    display: block;
+		    width: 100%;
+		    height: 200px;
+		    background: none;
+		    margin: 0 auto;
+		    position: relative;
+		    top: 12em;
+		}
+				
+		/* PIT STOP LOGO */
+		#pitstop img{
+		    display: block;
+		    width: 90%;
+		    margin: 0 auto;
+		}
+		/* PIT STOP LOGO */
+
+	
+	}
+	
+	@media only screen and (max-width:785px) {
+		
+		header {
+		    height: 60px;
+		    background: black;
+	    }
+	    
+	    #nav {
+		    display: none;
+		    margin-left: 0px;
+		    margin-top: 36px;
+		}
+	    
+		#nav a:hover{
+			border-bottom: none;
+		}
+		
+		/** MENU BUTTON **/
+		#cpBtn{
+		    position: fixed;
+		    left: 20px;
+		    top: 7px;
+		    width: 60px;
+		    height: 40px;	
+		    background: #000000;
+			border: #FFF 1px solid;
+			border-radius: 2px;
+			padding: 2px 5px;
+			cursor: pointer;
+			font-family: 'Open Sans', sans-serif;
+			transition: border 0.3s linear 0s;
+		}
+		
+		#cpBtn p {
+		    display: block;
+		    text-align: center;
+		    margin: 0 auto;
+		    padding-top: 7px;
+		    font-size: bold;
+		    color: white;
+		    /* margin-right: 0px; */
+		}
+				
+		#cpBtn:hover{
+			border: #e0d210 1px solid;
+		}
+		#cpBtn:hover div{
+			background: #06F;
+		}
+		#cpBtn > div{
+			width: 50px;
+			height: 4px;
+			background: #333;
+			margin: 7px 0px;
+			border-radius: 4px;
+			transition: background 0.3s linear 0s;
+		}
+		#cp{
+			position: fixed;
+			left: -260px;
+			top: 60px;
+			display: block;
+			width: 260px;
+			height: 0px;
+			text-transform: uppercase;
+			font-family: 'Open Sans', sans-serif;
+			background: rgba(0, 0, 0, 0.68);
+			transition: left 0.3s linear 0s;
+		}
+		
+		#cp li a {
+		    display: block;
+		    text-decoration: none;
+		    color: black;
+		    margin-top: 1em;
+		    letter-spacing: 2px;
+		    background-color: #e0d210;
+		    width: 190px;
+		    padding: 5px;
+		    -webkit-transition: 0.3s;
+		    /* height: 29px; */
+		}
+		
+		#cp li a:hover {
+			color: black;
+			background-color: #e0d210;
+			
+		}
+
+		/** MENU BUTTON **/
+		
+		.socialnetwork li{
+		    width: 20px;
+		    height: 20px;
+		    float: right;
+		    background-color: white;
+		    margin-top: -1.2em;
+		    margin-right: 0.8em;
+		    display: inline;
+		    border-radius: 200px;
+		    text-decoration: none;
+		}
+		.facebook a:link {
+		    background-image: url(../pitstopweb/images/socialicons/facebook.png);
+		    width: 20px;
+		    height: 20px;
+		    display: block;
+		    -webkit-transition: 1.5s;
+		    background-color: black;
+		    background-size: contain;
+		
+		}
+		
+		.facebook a:link:hover {
+			-ms-transform: rotate(360deg); /* IE 9 */
+		    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		    transform: rotate(360deg);
+		    background-color: black;
+		
+		}
+		
+		.twitter a:link {
+		    background-image: url(../pitstopweb/images/socialicons/twitter.png);
+		    width: 20px;
+		    height: 20px;
+		    display: block;
+		    -webkit-transition: 1.5s;
+		    background-color: black;
+		    background-size: contain;
+		
+		}
+		
+		.twitter a:link:hover {
+			-ms-transform: rotate(360deg); /* IE 9 */
+		    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		    transform: rotate(360deg);
+		    background-color: black;
+		
+		}
+		
+		
+		.vimeo a:link {
+		    background-image: url(../pitstopweb/images/socialicons/vimeo2.png);
+		    width: 20px;
+		    height: 20px;
+		    display: block;
+		    -webkit-transition: 1.5s;
+		    background-color: black;
+		    background-size: contain;
+		
+		}
+		
+		.vimeo a:link:hover {
+			-ms-transform: rotate(360deg); /* IE 9 */
+		    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		    transform: rotate(360deg);
+		    background-color: black;
+		
+		}
+		
+		
+		.youtube a:link {
+		    background-image: url(../pitstopweb/images/socialicons/youtube.png);
+		    width: 20px;
+		    height: 20px;
+		    display: block;
+		    -webkit-transition: 1.5s;
+		    background-color: black;
+		    background-size: contain;
+		}
+		
+		.youtube a:link:hover {
+			-ms-transform: rotate(360deg); /* IE 9 */
+		    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+		    transform: rotate(360deg);
+		    background-color: black;
+		
+		}
+		
+		.panel{
+			background: rgba(0,  0,  0, 0.54)0;
+		}
+		
+		p.space {
+		    padding: 0px;
+		}
+				
+		.wrapper{
+			width: 550px;
+		}
+		
+		.synopsis{
+			width: 550px;
+		}
+		
+		.trailer{
+			width: 550px;
+		}
+		
+		.screening{
+			width: 550px;
+		}
+		
+		.screening img{
+			display: block;
+			width: 150px;
+			float: right;
+			margin: 0.5em;
+		}
+
+		
+		.cast{
+			width: 550px;
+		}
+		
+		.crew{
+			width: 550px;
+		}
+		
+		#crewlist {
+	    	width: 93%;
+		}
+		
+		.bts{
+			width: 550px;
+		}
+		
+		.bts h1 {
+		    width: 55%;
+		    color: #e74c3c;
+		    font-size: 27px;
+		}
+		
+		.contact{
+			width: 550px;
+		}
+		
+		.contact h1 {
+		    width: 65%;
+		    font-size: 19px;
+		    margin-bottom: 1em;
+		}
+		
+		.partners {
+			width: 550px;
+		}
+
+
+
+	}
+	
+	@media only screen and (max-width:760px){
+		
+	    
+		#nav {
+		    display: none;
+		    margin-left: 0px;
+		    margin-top: 10px;
+		}
+			    
+	    #nav a {
+		    color: gray;
+		}
+		
+		#nav a:hover{
+			border-bottom: none;
+		}
+		
+		p.space {
+		    padding: 0px;
+		}
+						
+		.wrapper{
+			width: 100%;
+		}
+		
+		.synopsis{
+			width: 100%;
+		}
+		
+		.synopsis img {
+		    width: 90%;
+		    display: block;
+		    margin: 0 auto;
+		    padding-top: 1em;
+		    padding-left: 0em;
+		    float: none;
+		}
+		
+		.trailer{
+			width: 100%;
+			padding-bottom: 0px;
+			margin-top: -11em;
+		}
+		
+		.screening{
+			width: 100%;
+			margin-top: 4em;
+		}
+		
+		.screening img{
+			display: block;
+			max-width: 150px;
+			float: right;
+			margin: 0.5em auto;
+		}
+
+		
+		.cast{
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		.cast h2 {
+		    color: #1abc9c;
+		    font-size: 20px;
+		    /* float: left; */
+		    margin-bottom: 1.5em;
+		    margin-left: -18px;
+		}
+				
+		.panel img {
+		    width: 100%;
+		    display: block;
+		    float: left;
+		}
+		
+		.crew{
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		#crewlist {
+	    	width: 93%;
+		}
+		
+		.bts{
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		.bts h1 {
+		    width: 55%;
+		    color: #e74c3c;
+		    font-size: 27px;
+		}
+		
+		.contact{
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		.contact h1 {
+		    width: 65%;
+		    font-size: 19px;
+		    margin-bottom: 1em;
+		}
+		
+		.contact p {
+		    font-size: 14px;
+		    margin-left: 1em;
+		}
+		
+		.partners {
+			width: 100%;
+		    margin-top: -10em;
+		    height: 185px;
+		}
+		
+		li.processmovingimg a {
+		    width: 29px;
+			height: 29px;
+		}
+
+	}
+	
+
+	@media only screen and (max-width:480px) {
+		
+		body{
+			width: 100%;
+			background-image:url(../pitstopweb/images/homeimage.png) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+		
+		.wrapper {
+			width: 100%;
+		}
+		
+		.space{
+			display: none;
+		}
+				
+		.arrow {
+		    position: absolute;
+		    bottom: 18em;
+		    left: 50%;
+		    display: none;
+		    margin-left: -35px;
+		    width: 70px;
+		    height: 32px;
+		    background-image: url(http://www.pitstopfilm.co.uk/wp-content/themes/pitstopweb/images/arrow1.png);
+		    background-size: contain;
+		    animation: bounce 2s infinite;
+		    -webkit-animation: bounce 2s infinite;
+		    -moz-animation: bounce 2s infinite;
+		    -o-animation: bounce 2s infinite;
+		}
+		
+		#pitstop img {
+		    display: block;
+		    width: 90%;
+		    margin: 0 auto;
+		    padding-left: 0.5em;
+		}
+		
+		.arrows {
+		    z-index: 10;
+		}
+		
+		.facebook a:link{
+			background-color: none;
+		}
+		
+		.vimeo{
+			background-color: transparent;
+		}
+		.youtube{
+			background-color: transparent;
+		}
+		
+		.twitter{
+			background-color: transparent;
+		}
+		
+		.socialnetwork li {
+		    zoom: 170%;
+		    margin-top: -0.8em;
+		}
+
+				
+		li.bradfordcityoffilm a {
+		    width: 45px;
+		    height: 29px;
+		}
+				
+		li.finite a {
+		    width: 67px;
+		    height: 23px;
+		    margin-top: 0.9em;
+
+		}	
+		
+		li.provision a {
+		    display: block;
+		    width: 93px;
+		    height: 12px;
+		    margin-top: 1em;
+		    background-size: cover;
+		    background-image: url(http://pitstopfilm.co.uk/pitstop/wp-content/uploads/2015/08/Provisionlogo.png);
+		}		
+		
+		#synopsis p {
+		    font-size: 14px;
+		    margin-left: -30px;
+		}
+		
+		
+		
+		.synopsis {
+		    height: 1160px;
+		}
+		
+		.trailer {
+		    padding-top: 100px;
+		    /* padding-bottom: 140px; */
+		    margin-top: -8em;
+		}	
+			
+		.cast p{
+			font-size: 14px;
+			padding-left: 5px;
+		}
+		
+		.cast h2{
+			padding-left: 10px;
+		}
+
+		.crew p{
+			font-size: 14px;
+			padding-left: 5px;
+		}
+		
+		
+		.bts {
+		    margin-top: -15px;
+		    /* margin: 0 auto; */
+		}
+		
+		.contact {
+		    margin-top: -16px;
+		}
+		
+		.contact h1 {
+		    width: 65%;
+		    font-size: 18px;
+		    margin-bottom: 1em;
+		}
+		
+		.contact p {
+		    font-size: 12px;
+		    margin-left: 0em;
+		}
+		
+		.bts{
+			display: none;
+		}
+		
+		.bts h1 {
+		    width: 88%;
+		    color: #e74c3c;
+		    font-size: 18px;
+		}
+		
+		.down {
+		    width: 37px;
+		    margin-left: 2.5em;
+		}
+		
+		.up{
+		    width: 37px;
+		    margin-left: 2.5em;
+		}
+		
+		p.space{
+			height: 10px;
+		}
+		
+		
+		li.bradfordcityoffilm a {
+			display: block;
+		    position: relative;
+		    top:-1em;
+		}
+		
+		li.processmovingimg a {
+			display: block;
+		    position: relative;
+		    top:-1em;
+		}
+		
+		.cast {
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		.screening {
+		    width: 100%;
+		    margin-top: 4em;
+		}	
+			
+		.screening h1{
+			font-size: 20px;
+		}
+		
+		.crew {
+			width: 100%;
+			margin-top: -1em;
+		}
+		
+		.partners {
+		    width: 100%;
+		    margin-top: -10em;
+		}
+		
+		.developerlink {
+		    float: left;
+		    margin-top: 24px;
+		    left: 7em;
+		    display: none;
+		    text-align: center;
+		    font-size: 12px;
+		}
+		
+		.panel img {
+		    width: 98%;
+		    display: block;
+		    float: left;
+		}
+		
+		.synopsis img {
+		    padding-top: 0em;
+		    padding-left: 0em;
+		}
+		.synopsis {
+		    height: 1160px;
+		    margin-top: 17em;
+		}
+		
+		#ashortfilm {
+		    display: block;
+		    width: 316px;
+		    color: white;
+		    float: none;
+		    margin-top: -5px;
+		    padding-left: 5px;
+		    letter-spacing: 2px;
+		    margin-left: 4em;
+		    /* text-transform: uppercase; */
+		    font-size: 10px;
+		}
+
+				
+	}
+	
+	
+
+
+

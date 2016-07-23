@@ -1,0 +1,4 @@
+[19-Aug-2015 14:02:12 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/functions.php on line 90
+[19-Aug-2015 14:02:33 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/functions.php on line 18
+[27-Oct-2015 19:33:25 UTC] PHP Parse error:  syntax error, unexpected 'Finite' (T_STRING) in /home3/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/footer.php on line 24
+[27-Oct-2015 19:33:26 UTC] PHP Parse error:  syntax error, unexpected 'Finite' (T_STRING) in /home3/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/footer.php on line 24
