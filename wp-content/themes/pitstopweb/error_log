@@ -1,7 +1,0 @@
-[02-Sep-2015 07:40:56 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/index.php on line 1
-[12-Sep-2015 04:25:14 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/index.php on line 1
-[07-Oct-2015 04:56:57 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/haroonj/public_html/pitstop/wp-content/themes/pitstopweb/index.php on line 1
-[03-Nov-2015 12:55:41 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/haroonj/public_html/wp-content/themes/pitstopweb/index.php on line 1
-[04-Nov-2015 11:20:26 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/haroonj/public_html/wp-content/themes/pitstopweb/index.php on line 1
-[05-Nov-2015 10:34:16 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/haroonj/public_html/wp-content/themes/pitstopweb/index.php on line 1
-[20-Feb-2016 03:59:15 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home3/haroonj/public_html/wp-content/themes/pitstopweb/index.php on line 1
